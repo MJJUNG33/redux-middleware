@@ -1,0 +1,144 @@
+{
+  "products":[
+      {
+          "id":0,
+          "img":"https://noona-hnm.netlify.app/pattern-jacket.jpeg",
+          "title":"Belted Twill Coat",
+          "price": 270,
+          "choice":true,
+          "new":true,
+          "size":["S", "M", "L"]
+
+      },
+      {
+          "id":1,
+          "img":"https://noona-hnm.netlify.app/ankle-jeans.jpeg",
+          "title":"Slim Mom High Ankle Jeans",
+          "price":75,
+          "choice":true,
+          "new":true,
+          "size":["S","M","L"]
+
+      },
+      {
+          "id":2,
+          "img":"https://noona-hnm.netlify.app/wide-jeans.jpeg",
+          "title":"Wide High Jeans",
+          "price":60,
+          "choice":false,
+          "new":true,
+          "size":["S","M","L"]
+
+      },
+      {
+          "id":3,
+          "img":"https://noona-hnm.netlify.app/cottom-dress.jpeg",
+          "title":"Puff-sleeved Dress",
+          "price":55,
+          "choice":false,
+          "new":true,
+          "size":["S","M","L"]
+
+      },
+      {
+          "id":4,
+          "img":"https://noona-hnm.netlify.app/shirt-dress.jpeg",
+          "title":"Frill-detail Dress",
+          "price":40,
+          "choice":true,
+          "new":false,
+          "size":["S","M","L"]
+
+      },
+      {
+          "id":5,
+          "img":"https://noona-hnm.netlify.app/flare-dress.jpeg",
+          "title":"Sequined Flare Dress",
+          "price":100,
+          "choice":false,
+          "new":false,
+          "size":["S","M","L"]
+
+      },
+      {
+          "id":6,
+          "img":"https://noona-hnm.netlify.app/single-jacket.jpeg",
+          "title":"Double breasted Jacket",
+          "price":160,
+          "choice":true,
+          "new":false,
+          "size":["S","M","L"]
+
+      },
+      {
+          "id":7,
+          "img":"https://noona-hnm.netlify.app/oversize-hoodie.jpeg",
+          "title":"Oversized Zip Hoodie",
+          "price":55,
+          "choice":false,
+          "new":true,
+          "size":["S","M","L"]
+
+      },
+      {
+          "id":8,
+          "img":"https://noona-hnm.netlify.app/track-jacket.jpeg",
+          "title":"Appliquéd Track Jacket",
+          "price":110,
+          "choice":true,
+          "new":true,
+          "size":["S","M","L"]
+
+      },
+      {
+          "id":9,
+          "img":"https://noona-hnm.netlify.app/design-hoodie.jpeg",
+          "title":"Printed Hoodie",
+          "price":30,
+          "choice":false,
+          "new":true,
+          "size":["S","M","L"]
+
+      },
+      {
+          "id":10,
+          "img":"https://noona-hnm.netlify.app/regular-wide-jeans.jpeg",
+          "title":"Wide Twill Pants",
+          "price":25,
+          "choice":true,
+          "new":false,
+          "size":["S","M","L"]
+
+      },
+      {
+          "id":11,
+          "img":"https://noona-hnm.netlify.app/high-jeans.jpeg",
+          "title":"Flared Low Jeans ",
+          "price":50,
+          "choice":true,
+          "new":true,
+          "size":["S","M","L"]
+
+      },
+      {
+          "id":12,
+          "img":"https://noona-hnm.netlify.app/mash-dress.jpeg",
+          "title":"Gathered Mesh Dress",
+          "price":20,
+          "choice":true,
+          "new":true,
+          "size":["S","M","L"]
+
+      },
+      {
+          "id":13,
+          "img":"https://noona-hnm.netlify.app/sweat-shirt.jpeg",
+          "title":"Sweatshirt",
+          "price":35,
+          "choice":false,
+          "new":false,
+          "size":["S","M","L"]
+
+      }
+  ]
+}
