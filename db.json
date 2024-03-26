@@ -7,7 +7,7 @@
           "price": 270,
           "choice":true,
           "new":true,
-          "size":["S", "M", "L"]
+          "size":["S, ", "M, ", "L"]
 
       },
       {
@@ -17,7 +17,7 @@
           "price":75,
           "choice":true,
           "new":true,
-          "size":["S","M","L"]
+          "size":["S, ","M, ","L"]
 
       },
       {
@@ -27,7 +27,7 @@
           "price":60,
           "choice":false,
           "new":true,
-          "size":["S","M","L"]
+          "size":["S, ","M, ","L"]
 
       },
       {
@@ -37,7 +37,7 @@
           "price":55,
           "choice":false,
           "new":true,
-          "size":["S","M","L"]
+          "size":["S, ","M, ","L"]
 
       },
       {
@@ -47,7 +47,7 @@
           "price":40,
           "choice":true,
           "new":false,
-          "size":["S","M","L"]
+          "size":["S, ","M, ","L"]
 
       },
       {
@@ -67,7 +67,7 @@
           "price":160,
           "choice":true,
           "new":false,
-          "size":["S","M","L"]
+          "size":["S, ","M, ","L"]
 
       },
       {
@@ -77,7 +77,7 @@
           "price":55,
           "choice":false,
           "new":true,
-          "size":["S","M","L"]
+          "size":["S, ","M, ","L"]
 
       },
       {
@@ -87,7 +87,7 @@
           "price":110,
           "choice":true,
           "new":true,
-          "size":["S","M","L"]
+          "size":["S, ","M, ","L"]
 
       },
       {
@@ -97,7 +97,7 @@
           "price":30,
           "choice":false,
           "new":true,
-          "size":["S","M","L"]
+          "size":["S, ","M, ","L"]
 
       },
       {
@@ -107,7 +107,7 @@
           "price":25,
           "choice":true,
           "new":false,
-          "size":["S","M","L"]
+          "size":["S, ","M, ","L"]
 
       },
       {
@@ -117,7 +117,7 @@
           "price":50,
           "choice":true,
           "new":true,
-          "size":["S","M","L"]
+          "size":["S, ","M, ","L"]
 
       },
       {
@@ -127,7 +127,7 @@
           "price":20,
           "choice":true,
           "new":true,
-          "size":["S","M","L"]
+          "size":["S, ","M, ","L"]
 
       },
       {
@@ -137,7 +137,7 @@
           "price":35,
           "choice":false,
           "new":false,
-          "size":["S","M","L"]
+          "size":["S, ","M, ","L"]
 
       }
   ]

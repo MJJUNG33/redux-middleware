@@ -1,30 +1,25 @@
 import React from "react";
+import { Card } from "react-bootstrap";
 
-const ProductsCard = ({ products }) => {
+const ProductsCard = ({ product }) => {
   return (
-    <div>
-      {products.map((product, i) => {
-        return (
-          <div className="product-list" key={i}>
-            <img src={product.img} alt={product.title} />
-            {product.choice === true ? (
-              <p className="conscious-choice-product">Conscious choice</p>
-            ) : (
-              ""
-            )}
-            {product.new === true ? (
-              <p>
-                {product.title} <span className="new-product">New</span>{" "}
-              </p>
-            ) : (
-              <p className="product-title">{product.title}</p>
-            )}
-            <p className="product-price">${product.price}</p>
-            <p className="product-size">Available size: {product.size}</p>
-          </div>
-        );
-      })}
-    </div>
+    <Card className="gap-1 mt-4">
+      <Card.Img src={product?.img} alt={product.title} />
+      <Card.Body>
+        {product?.choice === true ? (
+          <Card.Text>Conscious choice</Card.Text>
+        ) : (
+          ""
+        )}
+        {product?.new === true ? (
+          <Card.Title>{product?.title} New</Card.Title>
+        ) : (
+          <Card.Title>{product?.title}</Card.Title>
+        )}
+        <Card.Subtitle>${product?.price}</Card.Subtitle>
+        <Card.Text>Available size: {product?.size}</Card.Text>
+      </Card.Body>
+    </Card>
   );
 };
 
