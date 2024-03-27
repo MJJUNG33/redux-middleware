@@ -7,16 +7,16 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
-const NavBar = () => {
+const Navbar = () => {
   const menuList = ["Women", "Men", "Baby", "Home", "Sale", "Sustainability"];
 
   return (
     <div>
       <div className="nav-side">
-        <div>
+        <Link to="/login" className="login">
           <FontAwesomeIcon icon={faUser} />
           <span className="nav-side-title">Login</span>
-        </div>
+        </Link>
         <div>
           <FontAwesomeIcon icon={faHeart} />
           <span className="nav-side-title">Like</span>
@@ -27,15 +27,14 @@ const NavBar = () => {
         </div>{" "}
       </div>
 
-      <div className="logo">
-        {" "}
+      <Link to="/" className="logo">
         <img
           className="logo"
           width="100"
           src="https://logos-world.net/wp-content/uploads/2020/04/HM-Logo-1999-present.jpg"
           alt="Brand logo"
         />
-      </div>
+      </Link>
 
       <div className="search-bar">
         <input
@@ -64,4 +63,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default Navbar;

@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import ProductsPage from "./page/ProductsPage";
 import ProductDetailPage from "./page/ProductDetailPage";
 import LoginPage from "./page/LoginPage";
-import NavBar from "./component/NavBar";
+import Navbar from "./component/Navbar";
 
 // 1. Needed routes: All products page, product detail page and login page.
 // 2. All products display on the products page.
@@ -21,7 +21,7 @@ import NavBar from "./component/NavBar";
 function App() {
   return (
     <div className="App">
-      <NavBar />
+      <Navbar />
       <Routes>
         <Route path="/" element={<ProductsPage />} />
         <Route path="/products/:id" element={<ProductDetailPage />} />

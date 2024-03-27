@@ -3,21 +3,28 @@ import { Card } from "react-bootstrap";
 
 const ProductsCard = ({ product }) => {
   return (
-    <Card className="gap-1 mt-4">
+    <Card className="mt-4 product-card">
       <Card.Img src={product?.img} alt={product.title} />
-      <Card.Body>
+      <Card.Body className="d-flex flex-column align-items-start">
         {product?.choice === true ? (
-          <Card.Text>Conscious choice</Card.Text>
+          <Card.Text className="extra-info choice">Conscious choice</Card.Text>
         ) : (
-          ""
+          <div className="choice"></div>
         )}
         {product?.new === true ? (
-          <Card.Title>{product?.title} New</Card.Title>
+          <>
+            <Card.Text className="extra-info new-arrival">
+              New Arrival
+            </Card.Text>
+            <Card.Title>{product?.title}</Card.Title>
+          </>
         ) : (
           <Card.Title>{product?.title}</Card.Title>
         )}
-        <Card.Subtitle>${product?.price}</Card.Subtitle>
-        <Card.Text>Available size: {product?.size}</Card.Text>
+        <Card.Text>${product?.price}</Card.Text>
+        <Card.Text className="extra-info">
+          Available size: {product?.size}
+        </Card.Text>
       </Card.Body>
     </Card>
   );

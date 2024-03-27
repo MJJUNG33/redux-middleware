@@ -1,13 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ProductsCard from "../component/ProductsCard";
-import {
-  Container,
-  Card,
-  Col,
-  Row,
-  CardBody,
-  CardTitle,
-} from "react-bootstrap";
+import { Container, Col, Row } from "react-bootstrap";
 
 const ProductsPage = () => {
   const [products, setProducts] = useState([]);
