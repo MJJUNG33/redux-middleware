@@ -31,8 +31,9 @@ const Navbar = ({ login }) => {
             onClick={handleShow}
           />
 
-          <div className="logo" onClick={home}>
+          <div className="logo">
             <img
+              onClick={home}
               width={100}
               src="https://logos-world.net/wp-content/uploads/2020/04/HM-Logo-1999-present.jpg"
               alt="Brand logo"
