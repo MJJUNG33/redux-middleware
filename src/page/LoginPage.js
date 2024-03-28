@@ -19,7 +19,7 @@ const LoginPage = () => {
         </Form.Group>
 
         <Button variant="danger" type="submit">
-          Submit
+          Login
         </Button>
       </Form>
     </Container>

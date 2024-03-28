@@ -5,6 +5,7 @@ import ProductsPage from "./page/ProductsPage";
 import ProductDetailPage from "./page/ProductDetailPage";
 import LoginPage from "./page/LoginPage";
 import Navbar from "./component/Navbar";
+import { useState } from "react";
 
 // 1. Needed routes: All products page, product detail page and login page.
 // 2. All products display on the products page.

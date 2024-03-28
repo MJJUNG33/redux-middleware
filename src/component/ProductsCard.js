@@ -3,9 +3,9 @@ import { Card } from "react-bootstrap";
 
 const ProductsCard = ({ product }) => {
   return (
-    <Card className="mt-4 product-card">
+    <Card className="mt-2 product-card">
       <Card.Img src={product?.img} alt={product.title} />
-      <Card.Body className="d-flex flex-column align-items-start">
+      <Card.Body className="d-flex pt-0 flex-column align-items-start">
         {product?.choice === true ? (
           <Card.Text className="extra-info choice">Conscious choice</Card.Text>
         ) : (
@@ -19,9 +19,12 @@ const ProductsCard = ({ product }) => {
             <Card.Title>{product?.title}</Card.Title>
           </>
         ) : (
-          <Card.Title>{product?.title}</Card.Title>
+          <div>
+            <div className="new-arrival"></div>
+            <Card.Title>{product?.title}</Card.Title>
+          </div>
         )}
-        <Card.Text>${product?.price}</Card.Text>
+        <Card.Text className="price">${product?.price}</Card.Text>
         <Card.Text className="extra-info">
           Available size: {product?.size}
         </Card.Text>

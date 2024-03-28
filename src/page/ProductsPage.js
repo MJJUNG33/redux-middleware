@@ -19,8 +19,13 @@ const ProductsPage = () => {
 
   return (
     <div>
-      <Container className="mt-5">
-        <Row xs={1} md={2} lg={4} className="align-items-start">
+      <Container className="mt-5 mb-5">
+        <Row
+          xs={1}
+          md={2}
+          lg={4}
+          className="align-items-start m-1 product-list"
+        >
           {products.map((product, i) => {
             return (
               <Col key={i}>
