@@ -324,16 +324,6 @@
             "new": true,
             "size": ["S, ", "M, ", "L"],
             "categories": ["men", "top"]
-          },
-          {
-            "id": 30,
-            "img": "https://lp2.hm.com/hmgoepprod?set=source[/56/cd/56cd7fab163b2f45dc976157aa8922460c82d226.jpg],origin[dam],category[men_tshirtstanks_tanks],type[DESCRIPTIVESTILLLIFE],res[w],hmver[2]&call=url[file:/product/main]",
-            "title": "Loose Fit T-shirt",
-            "price": 9.99,
-            "choice": false,
-            "new": true,
-            "size": ["S, ", "M, ", "L"],
-            "categories": ["men", "top"]
           }
       ]      
 }
