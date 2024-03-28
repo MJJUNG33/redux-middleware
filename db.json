@@ -264,66 +264,6 @@
             "new": true,
             "size": ["S, ", "M, ", "L"],
             "categories": ["women", "top"]
-          },
-          {
-            "id": 24,
-            "img": "https://lp2.hm.com/hmgoepprod?set=source[/86/21/86217fddf680494152081271b9ad0d14c823dac7.jpg],origin[dam],category[],type[DESCRIPTIVESTILLLIFE],res[w],hmver[2]&call=url[file:/product/main]",
-            "title": "Regular Fit Lace Resort Shirt",
-            "price": 24.99,
-            "choice": true,
-            "new": false,
-            "size": ["S, ", "M, ", "L"],
-            "categories": ["men", "top"]
-          },
-          {
-            "id": 25,
-            "img": "https://lp2.hm.com/hmgoepprod?set=source[/62/a6/62a66bce56ba39c873dd83d446032297a1269235.jpg],origin[dam],category[],type[DESCRIPTIVESTILLLIFE],res[w],hmver[2]&call=url[file:/product/main]",
-            "title": "2-pack Regular Fit Tank Tops",
-            "price": 15.99,
-            "choice": true,
-            "new": false,
-            "size": ["S, ", "M, ", "L"],
-            "categories": ["men", "top"]
-          },
-          {
-            "id": 26,
-            "img": "https://lp2.hm.com/hmgoepprod?set=source[/3d/f6/3df6552da32cacc7eb3c0f2df2536f13a4f41bad.jpg],origin[dam],category[men_tshirtstanks_tanks],type[DESCRIPTIVESTILLLIFE],res[w],hmver[2]&call=url[file:/product/main]",
-            "title": "Regular Fit Linen-blend Pants",
-            "price": 34.99,
-            "choice": false,
-            "new": true,
-            "size": ["S, ", "M, ", "L"],
-            "categories": ["men", "bottom"]
-          },
-          {
-            "id": 27,
-            "img": "https://lp2.hm.com/hmgoepprod?set=source[/b2/20/b220473edd6e88b0285d124061a24548e20ffdba.jpg],origin[dam],category[],type[DESCRIPTIVESTILLLIFE],res[w],hmver[2]&call=url[file:/product/main]",
-            "title": "Slim Fit Suit Pants",
-            "price": 44.99,
-            "choice": true,
-            "new": false,
-            "size": ["S, ", "M, ", "L"],
-            "categories": ["men", "bottom"]
-          },
-          {
-            "id": 28,
-            "img": "https://lp2.hm.com/hmgoepprod?set=source[/4f/98/4f98ad3035582e330f5a20dd641ddfdaae7e5e4e.jpg],origin[dam],category[],type[DESCRIPTIVESTILLLIFE],res[w],hmver[2]&call=url[file:/product/main]",
-            "title": "Oversized Fit Hooded Jacket",
-            "price": 34.99,
-            "choice": true,
-            "new": false,
-            "size": ["S, ", "M, ", "L"],
-            "categories": ["men", "outer"]
-          },
-          {
-            "id": 29,
-            "img": "https://lp2.hm.com/hmgoepprod?set=source[/8f/e0/8fe020c902ce10d8bb99aeeafbd21abe89f1a81f.jpg],origin[dam],category[men_hoodiessweatshirts_hoodies],type[DESCRIPTIVESTILLLIFE],res[w],hmver[2]&call=url[file:/product/main]",
-            "title": "2-pack Regular Fit Tank Tops",
-            "price": 15.99,
-            "choice": false,
-            "new": true,
-            "size": ["S, ", "M, ", "L"],
-            "categories": ["men", "top"]
           }
       ]      
 }
