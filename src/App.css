@@ -132,14 +132,6 @@
   font-weight: bold;
 }
 
-.detail-img {
-  width: fit-content;
-}
-
-.product-detail-card {
-  border: 0;
-}
-
 @media only screen and (min-width: 48rem) {
   .nav-menu {
     justify-content: center;
