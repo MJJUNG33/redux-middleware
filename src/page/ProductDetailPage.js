@@ -21,26 +21,28 @@ const ProductDetailPage = () => {
   return (
     <Container
       fluid
-      className="d-flex flex-column align-items-center justify-content-enter mb-2"
+      className="d-flex flex-column align-items-center justify-content-center mb-2"
     >
-      <Row>
+      <Col xs={12}>
         <Image src={product.img} alt={product.title} fluid />
-      </Row>
-      <Row className="d-flex align-items-start">
-        <Col xs={4} className="pe-0">
-          {product.choice === true ? (
-            <p className="extra-info choice">Conscious choice</p>
-          ) : (
-            <div className="choice"></div>
-          )}
-        </Col>
-        <Col>
-          {product?.new === true ? (
-            <p className="extra-info new-arrival">New Arrival</p>
-          ) : (
-            <div className="new-arrival"></div>
-          )}{" "}
-        </Col>
+      </Col>
+      <Col xs={12} className="d-flex flex-column align-items-start mt-2 ">
+        <Row className="w-100">
+          <Col xs={4} className="pe-0">
+            {product.choice === true ? (
+              <p className="extra-info choice">Conscious choice</p>
+            ) : (
+              <div className="choice"></div>
+            )}
+          </Col>
+          <Col xs={5}>
+            {product?.new === true ? (
+              <p className="extra-info new-arrival">New Arrival</p>
+            ) : (
+              <div className="new-arrival"></div>
+            )}{" "}
+          </Col>
+        </Row>
 
         <Col xs={12} className="fw-bold">
           <p className="mb-0">{product.title}</p>
@@ -56,12 +58,12 @@ const ProductDetailPage = () => {
               ))}
           </Form.Select>
         </Col>
-        <Row className="w-100 mt-3 mb-2">
-          <Button className="m-2" variant="dark">
-            Add to bag
+        <Col className="w-100 mt-3 mb-2">
+          <Button className="w-100 p-2" variant="danger">
+            Add to cart
           </Button>
-        </Row>
-      </Row>
+        </Col>
+      </Col>
     </Container>
   );
 };
