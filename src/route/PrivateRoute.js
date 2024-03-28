@@ -6,7 +6,7 @@ const PrivateRoute = ({ authenticate }) => {
   if (!authenticate) {
     return <Navigate to="/login" />;
   } else {
-    <ProductDetailPage />;
+    return <ProductDetailPage />;
   }
 };
 

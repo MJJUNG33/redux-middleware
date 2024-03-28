@@ -6,6 +6,7 @@ const ProductDetailPage = () => {
 
   const getProductDetail = async () => {
     const url = `https://my-json-server.typicode.com/MJJUNG33/shopping-mall/products/${id}`;
+
     const response = await fetch(url);
     const data = await response.json();
     console.log(data);
@@ -13,7 +14,7 @@ const ProductDetailPage = () => {
 
   useEffect(() => {
     getProductDetail();
-  }, []);
+  }, [id]);
   return <div></div>;
 };
 
