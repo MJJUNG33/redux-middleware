@@ -6,7 +6,7 @@ import {
   faCartShopping,
   faBars,
 } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Container, Offcanvas, Nav } from "react-bootstrap";
 
 const Navbar = ({ login }) => {
@@ -15,6 +15,11 @@ const Navbar = ({ login }) => {
 
   const handleClose = () => setShowMenu(false);
   const handleShow = () => setShowMenu(true);
+
+  const navigate = useNavigate();
+  const home = () => {
+    navigate("/");
+  };
 
   return (
     <div>
@@ -26,13 +31,13 @@ const Navbar = ({ login }) => {
             onClick={handleShow}
           />
 
-          <Link to="/" className="logo">
+          <div className="logo" onClick={home}>
             <img
               width={100}
               src="https://logos-world.net/wp-content/uploads/2020/04/HM-Logo-1999-present.jpg"
               alt="Brand logo"
             />
-          </Link>
+          </div>
 
           <Offcanvas
             show={showMenu}
