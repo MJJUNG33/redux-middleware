@@ -180,6 +180,30 @@
     left: 50%;
     transform: translateX(-50%);
   }
+
+  .product-detail {
+    margin-top: 3rem;
+  }
+
+  .add-btn {
+    margin-top: 3rem;
+  }
+
+  .detail-title-price {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+  }
+
+  .detail-choice-new {
+    font-size: 1rem;
+    padding-right: 0;
+    margin-bottom: 0rem;
+  }
+
+  .detail-new {
+    margin-bottom: 1rem;
+    margin-left: 0.75rem;
+  }
 }
 
 @media only screen and (min-width: 64rem) {
