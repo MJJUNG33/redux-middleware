@@ -2,9 +2,9 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ProductsPage from "./page/ProductsPage";
-import ProductDetailPage from "./page/ProductDetailPage";
 import LoginPage from "./page/LoginPage";
 import Navbar from "./component/Navbar";
+import PrivateRoute from "./route/PrivateRoute";
 import { useEffect, useState } from "react";
 
 // 1. Needed routes: All products page, product detail page and login page.
@@ -32,7 +32,10 @@ function App() {
       <Navbar login={login} />
       <Routes>
         <Route path="/" element={<ProductsPage />} />
-        <Route path="/products/:id" element={<ProductDetailPage />} />
+        <Route
+          path="/products/:id"
+          element={<PrivateRoute authenticate={authenticate} />}
+        />
         <Route
           path="/login"
           element={

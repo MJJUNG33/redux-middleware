@@ -1,9 +1,15 @@
 import React from "react";
 import { Card } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 const ProductsCard = ({ product }) => {
+  const navigate = useNavigate();
+  const productDetail = () => {
+    navigate(`/products/${product.id}`);
+  };
+
   return (
-    <Card className="mt-2 product-card">
+    <Card className="mt-2 product-card" onClick={productDetail}>
       <Card.Img src={product?.img} alt={product.title} />
       <Card.Body className="d-flex pt-0 flex-column align-items-start">
         {product?.choice === true ? (
