@@ -5,7 +5,7 @@ import ProductsPage from "./page/ProductsPage";
 import ProductDetailPage from "./page/ProductDetailPage";
 import LoginPage from "./page/LoginPage";
 import Navbar from "./component/Navbar";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 // 1. Needed routes: All products page, product detail page and login page.
 // 2. All products display on the products page.
@@ -20,13 +20,25 @@ import { useState } from "react";
 // 10. If matched products exit, display the products, otherwise display message.
 
 function App() {
+  const [authenticate, setAuthenticate] = useState(false);
+  const [login, setLogin] = useState("Login");
+
+  useEffect(() => {
+    console.log(authenticate);
+  }, [authenticate]);
+
   return (
     <div className="App">
-      <Navbar />
+      <Navbar login={login} />
       <Routes>
         <Route path="/" element={<ProductsPage />} />
         <Route path="/products/:id" element={<ProductDetailPage />} />
-        <Route path="/login" element={<LoginPage />} />
+        <Route
+          path="/login"
+          element={
+            <LoginPage setAuthenticate={setAuthenticate} setLogin={setLogin} />
+          }
+        />
       </Routes>
     </div>
   );

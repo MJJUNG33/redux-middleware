@@ -9,7 +9,7 @@ import {
 import { Link } from "react-router-dom";
 import { Container, Offcanvas, Nav } from "react-bootstrap";
 
-const Navbar = () => {
+const Navbar = ({ login }) => {
   const [showMenu, setShowMenu] = useState(false);
   const menuList = ["Women", "Men", "Baby", "Home", "Sale", "Sustainability"];
 
@@ -62,7 +62,7 @@ const Navbar = () => {
         <div className="nav-side">
           <Link to="/login" className="nav-side-item">
             <FontAwesomeIcon icon={faUser} />
-            <span className="nav-side-title">Login</span>
+            <span className="nav-side-title">{login}</span>
           </Link>
           <Link to="/like" className="nav-side-item">
             <FontAwesomeIcon icon={faHeart} />

@@ -1,10 +1,20 @@
 import React from "react";
 import { Form, Button, Container } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
-const LoginPage = () => {
+const LoginPage = ({ setAuthenticate, setLogin }) => {
+  const navigate = useNavigate();
+  const loginUser = (e) => {
+    e.preventDefault();
+    setAuthenticate(true);
+    navigate("/");
+    setLogin("Logout");
+    console.log(loginUser);
+  };
+
   return (
     <Container>
-      <Form className="m-5">
+      <Form className="m-5" onSubmit={(e) => loginUser(e)}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control type="email" placeholder="Enter email" />
