@@ -7,7 +7,7 @@
           "price": 270,
           "choice":true,
           "new":true,
-          "size":["S, ", "M, ", "L"],
+          "size":["S","M","L"],
           "categories": ["women", "outer"]
 
 
@@ -19,7 +19,7 @@
           "price":75,
           "choice":true,
           "new":true,
-          "size":["S, ","M, ","L"],
+          "size":["S","M","L"],
           "categories": ["women", "bottom"]
 
       },
@@ -30,7 +30,7 @@
           "price":60,
           "choice":false,
           "new":true,
-          "size":["S, ","M, ","L"],
+          "size":["S","M","L"],
           "categories": ["women", "bottom"]
 
       },
@@ -41,7 +41,7 @@
           "price":55,
           "choice":false,
           "new":true,
-          "size":["S, ","M, ","L"],
+          "size":["S","M","L"],
           "categories": ["women", "dress"]
 
       },
@@ -52,7 +52,7 @@
           "price":40,
           "choice":true,
           "new":false,
-          "size":["S, ","M, ","L"],
+          "size":["S","M","L"],
           "categories": ["women", "dress"]
 
       },
@@ -74,7 +74,7 @@
           "price":160,
           "choice":true,
           "new":false,
-          "size":["S, ","M, ","L"],
+          "size":["S","M","L"],
           "categories": ["women", "outer"]
 
       },
@@ -85,7 +85,7 @@
           "price":55,
           "choice":false,
           "new":true,
-          "size":["S, ","M, ","L"],
+          "size":["S","M","L"],
           "categories": ["women", "top"]
 
       },
@@ -96,7 +96,7 @@
           "price":110,
           "choice":true,
           "new":true,
-          "size":["S, ","M, ","L"],
+          "size":["S","M","L"],
           "categories": ["women", "outer"]
 
       },
@@ -107,7 +107,7 @@
           "price":30,
           "choice":false,
           "new":true,
-          "size":["S, ","M, ","L"],
+          "size":["S","M","L"],
           "categories": ["women", "top"]
 
       },
@@ -118,7 +118,7 @@
           "price":25,
           "choice":true,
           "new":false,
-          "size":["S, ","M, ","L"],
+          "size":["S","M","L"],
           "categories": ["women", "bottom"]
 
       },
@@ -129,7 +129,7 @@
           "price":50,
           "choice":true,
           "new":true,
-          "size":["S, ","M, ","L"],
+          "size":["S","M","L"],
           "categories": ["women", "bottom"]
 
       },
@@ -140,7 +140,7 @@
           "price":20,
           "choice":true,
           "new":true,
-          "size":["S, ","M, ","L"],
+          "size":["S","M","L"],
           "categories": ["women", "dress"]
 
       },
@@ -151,7 +151,7 @@
           "price":35,
           "choice":false,
           "new":false,
-          "size":["S, ","M, ","L"],
+          "size":["S","M","L"],
           "categories": ["women", "top"]
 
       },
@@ -162,7 +162,7 @@
         "price":29.99,
         "new":true,
         "choice":false,
-        "size":["S, ","M, ","L"],
+        "size":["S","M","L"],
         "categories": ["women", "top"]
       },
         {
@@ -172,7 +172,7 @@
           "price": 18.99,
           "choice": true,
           "new": false,
-          "size": ["S, ", "M, ", "L"],
+          "size":["S","M","L"],
           "categories": ["women", "dress"]
         },
         {
@@ -182,7 +182,7 @@
           "price": 34.99,
           "choice": false,
           "new": true,
-          "size": ["S, ", "M, ", "L"],
+          "size":["S","M","L"],
           "categories": ["women", "dress"]
         },
         {
@@ -192,7 +192,7 @@
           "price": 29.99,
           "choice": true,
           "new": false,
-          "size": ["S, ", "M, ", "L"],
+          "size":["S","M","L"],
           "categories": ["women", "top"]
         },
         {
@@ -212,7 +212,7 @@
           "price": 24.99,
           "choice": true,
           "new": false,
-          "size": ["S, ", "M, ", "L"],
+          "size":["S","M","L"],
           "categories": ["women", "bottom"]
         },
         {
@@ -222,7 +222,7 @@
           "price": 49.99,
           "choice": false,
           "new": true,
-          "size": ["S, ", "M, ", "L"],
+          "size":["S","M","L"],
           "categories": ["women", "bottom"]
         },
         {
@@ -232,7 +232,7 @@
           "price": 24.99,
           "choice": true,
           "new": false,
-          "size": ["S, ", "M, ", "L"],
+          "size":["S","M","L"],
           "categories": ["women", "dress"]
         },
         {
@@ -242,7 +242,7 @@
           "price": 29.99,
           "choice": false,
           "new": true,
-          "size": ["S, ", "M, ", "L"],
+          "size":["S","M","L"],
           "categories": ["women", "top"]
         },
         {
@@ -252,7 +252,7 @@
             "price": 9.99,
             "choice": true,
             "new": true,
-            "size": ["S, ", "M, ", "L"],
+            "size":["S","M","L"],
             "categories": ["women", "accessories"]
           },
           {
@@ -262,7 +262,7 @@
             "price": 54.99,
             "choice": true,
             "new": true,
-            "size": ["S, ", "M, ", "L"],
+            "size":["S","M","L"],
             "categories": ["women", "top"]
           }
       ]      
