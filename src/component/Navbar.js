@@ -18,14 +18,10 @@ const Navbar = ({ login, setLogin, setAuthenticate }) => {
 
   const navigate = useNavigate();
 
-  const home = () => {
-    navigate("/");
-  };
-
   const search = (e) => {
     if (e.key === "Enter") {
       const query = e.target.value;
-      navigate(`/?q=${query}`);
+      navigate(`/products?q=${query}`);
     }
   };
 
@@ -47,14 +43,13 @@ const Navbar = ({ login, setLogin, setAuthenticate }) => {
             onClick={handleShow}
           />
 
-          <div className="logo">
+          <Link to="/" className="logo">
             <img
-              onClick={home}
               width={100}
               src="https://logos-world.net/wp-content/uploads/2020/04/HM-Logo-1999-present.jpg"
               alt="Brand logo"
             />
-          </div>
+          </Link>
 
           <Offcanvas
             show={showMenu}
