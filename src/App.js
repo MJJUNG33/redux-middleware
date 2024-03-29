@@ -36,6 +36,7 @@ function App() {
       />
       <Routes>
         <Route path="/" element={<ProductsPage />} />
+        <Route path="/products" element={<ProductsPage />} />
         <Route
           path="/products/:id"
           element={<PrivateRoute authenticate={authenticate} />}

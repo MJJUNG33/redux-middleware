@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faHeart } from "@fortawesome/free-regular-svg-icons";
 import {
@@ -12,20 +12,29 @@ import { Container, Offcanvas, Nav } from "react-bootstrap";
 const Navbar = ({ login, setLogin, setAuthenticate }) => {
   const [showMenu, setShowMenu] = useState(false);
   const menuList = ["Women", "Men", "Baby", "Home", "Sale", "Sustainability"];
+  const inputEl = useRef(null);
+  console.log("input", inputEl);
 
   const handleClose = () => setShowMenu(false);
   const handleShow = () => setShowMenu(true);
 
   const navigate = useNavigate();
 
-  const search = (e) => {
+  const handleSearch = (e) => {
     if (e.key === "Enter") {
       const query = e.target.value;
       navigate(`/products?q=${query}`);
     }
   };
 
-  const loginToggle = () => {
+  const handleSearchButton = () => {
+    const query = inputEl.current.value;
+    navigate(`/products?q=${query}`);
+  };
+
+  useEffect(() => {}, []);
+
+  const HandleLogin = () => {
     if (login !== "Login") {
       setLogin("Login");
       setAuthenticate(false);
@@ -79,7 +88,7 @@ const Navbar = ({ login, setLogin, setAuthenticate }) => {
         <div className="nav-side">
           <Link to="/login" className="nav-side-item">
             <FontAwesomeIcon icon={faUser} />
-            <span className="nav-side-title" onClick={loginToggle}>
+            <span className="nav-side-title" onClick={HandleLogin}>
               {login}
             </span>
           </Link>
@@ -96,14 +105,19 @@ const Navbar = ({ login, setLogin, setAuthenticate }) => {
 
       <div className="search-bar">
         <input
+          ref={inputEl}
           type="text"
           placeholder="Search products"
           aria-label="Search"
           name="q"
           className="search-input"
-          onKeyPress={(e) => search(e)}
+          onKeyDown={(e) => handleSearch(e)}
         />{" "}
-        <FontAwesomeIcon className="search-bar-icon" icon={faMagnifyingGlass} />
+        <FontAwesomeIcon
+          onClick={handleSearchButton}
+          className="search-bar-icon"
+          icon={faMagnifyingGlass}
+        />
       </div>
 
       <Nav className="nav-menu d-none d-md-flex">
