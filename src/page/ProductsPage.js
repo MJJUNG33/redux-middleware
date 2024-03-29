@@ -1,13 +1,18 @@
 import React, { useEffect, useState } from "react";
 import ProductsCard from "../component/ProductsCard";
 import { Container, Col, Row } from "react-bootstrap";
+import { useParams, useSearchParams } from "react-router-dom";
 
 const ProductsPage = () => {
   const [products, setProducts] = useState([]);
+  const [query, setQuery] = useSearchParams();
 
   const getProducts = async () => {
-    const url =
-      "https://my-json-server.typicode.com/MJJUNG33/shopping-mall/products";
+    const searchQuery = query.get("q") || "";
+    console.log("what os qeury?", searchQuery);
+    const url = `http://localhost:5000/products?q=${searchQuery}`;
+    // const url = `https://my-json-server.typicode.com/MJJUNG33/shopping-mall/products?q=${searchQuery}`;
+
     const response = await fetch(url);
     const data = await response.json();
     console.log(data);
@@ -16,7 +21,7 @@ const ProductsPage = () => {
 
   useEffect(() => {
     getProducts();
-  }, []);
+  }, [query]);
 
   return (
     <Container className="mt-5 mb-5">

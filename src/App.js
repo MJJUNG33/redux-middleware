@@ -29,7 +29,11 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar login={login} />
+      <Navbar
+        login={login}
+        setLogin={setLogin}
+        setAuthenticate={setAuthenticate}
+      />
       <Routes>
         <Route path="/" element={<ProductsPage />} />
         <Route

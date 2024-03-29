@@ -9,7 +9,7 @@ import {
 import { Link, useNavigate } from "react-router-dom";
 import { Container, Offcanvas, Nav } from "react-bootstrap";
 
-const Navbar = ({ login }) => {
+const Navbar = ({ login, setLogin, setAuthenticate }) => {
   const [showMenu, setShowMenu] = useState(false);
   const menuList = ["Women", "Men", "Baby", "Home", "Sale", "Sustainability"];
 
@@ -17,8 +17,24 @@ const Navbar = ({ login }) => {
   const handleShow = () => setShowMenu(true);
 
   const navigate = useNavigate();
+
   const home = () => {
     navigate("/");
+  };
+
+  const search = (e) => {
+    if (e.key === "Enter") {
+      const query = e.target.value;
+      navigate(`/?q=${query}`);
+    }
+  };
+
+  const loginToggle = () => {
+    if (login !== "Login") {
+      setLogin("Login");
+      setAuthenticate(false);
+      navigate("/login");
+    }
   };
 
   return (
@@ -68,7 +84,9 @@ const Navbar = ({ login }) => {
         <div className="nav-side">
           <Link to="/login" className="nav-side-item">
             <FontAwesomeIcon icon={faUser} />
-            <span className="nav-side-title">{login}</span>
+            <span className="nav-side-title" onClick={loginToggle}>
+              {login}
+            </span>
           </Link>
           <Link to="/like" className="nav-side-item">
             <FontAwesomeIcon icon={faHeart} />
@@ -88,6 +106,7 @@ const Navbar = ({ login }) => {
           aria-label="Search"
           name="q"
           className="search-input"
+          onKeyPress={(e) => search(e)}
         />{" "}
         <FontAwesomeIcon className="search-bar-icon" icon={faMagnifyingGlass} />
       </div>
