@@ -32,8 +32,6 @@ const Navbar = ({ login, setLogin, setAuthenticate }) => {
     navigate(`/products?q=${query}`);
   };
 
-  useEffect(() => {}, []);
-
   const HandleLogin = () => {
     if (login !== "Login") {
       setLogin("Login");

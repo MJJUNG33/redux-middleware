@@ -12,14 +12,14 @@ const ProductsPage = () => {
       try {
         const searchQuery = query.get("q") || "";
         console.log("Search query:", searchQuery);
-        const url = `http://localhost:5000/products?q=${searchQuery}`;
-        console.log("API URL:", url);
+        // const url = `http://localhost:5000/products?q=${searchQuery}`
+        const url = `https://my-json-server.typicode.com/MJJUNG33/shopping-mall/products?q=${searchQuery}`;
+
         const response = await fetch(url);
         const data = await response.json();
-        console.log("API Response:", data);
         setProducts(data);
       } catch (error) {
-        console.log("Error fetching products:", error);
+        console.log("Error:", error);
       }
     };
     getProducts();
