@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faHeart } from "@fortawesome/free-regular-svg-icons";
 import {
@@ -24,6 +24,7 @@ const Navbar = ({ login, setLogin, setAuthenticate }) => {
     if (e.key === "Enter") {
       const query = e.target.value;
       navigate(`/products?q=${query}`);
+      inputEl.current.value = "";
     }
   };
 
