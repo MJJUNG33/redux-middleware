@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useMemo } from "react";
+import React, { useEffect, useState, useMemo .} from "react";
 import ProductsCard from "../component/ProductsCard";
 import { Container, Col, Row } from "react-bootstrap";
 import { useSearchParams } from "react-router-dom";
@@ -12,8 +12,8 @@ const ProductsPage = () => {
       try {
         const searchQuery = query.get("q") || "";
         console.log("Search query:", searchQuery);
-        const url = `http://localhost:5000/products?q=${searchQuery}`;
-        // const url = `https://my-json-server.typicode.com/MJJUNG33/shopping-mall/products?q=${searchQuery}`;
+        // const url = `http://localhost:5000/products?q=${searchQuery}`;
+        const url = `https://my-json-server.typicode.com/MJJUNG33/shopping-mall/products?q=${searchQuery}`;
 
         const response = await fetch(url);
         const data = await response.json();
