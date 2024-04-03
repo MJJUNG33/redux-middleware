@@ -1,3 +1,5 @@
+import { productActions } from "../reducers/productReducer";
+
 function getProducts(searchQuery) {
 
     return async(dispatch, getState) => {
@@ -8,7 +10,8 @@ function getProducts(searchQuery) {
          const data = await response.json();
         //  setProducts(data);
          console.log(data)
-         dispatch({type:"GET_PRODUCT_SUCCESS", payload:{data}})
+        //  dispatch({type:"GET_PRODUCT_SUCCESS", payload:{data}})
+        dispatch(productActions.getProducts({data}))
     };
 }
 
@@ -20,7 +23,8 @@ function getDetailProduct(id) {
         const data = await response.json();
         console.log(data);
         // setProduct(data);
-    dispatch({type: "DETAIL_PRODUCT", payload: {data}})
+    // dispatch({type: "DETAIL_PRODUCT_SUCCESS", payload: {data}})
+    dispatch(productActions.getDetailProduct({data}))
     }
     
 }
