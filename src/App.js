@@ -6,6 +6,7 @@ import LoginPage from "./page/LoginPage";
 import Navbar from "./component/Navbar";
 import PrivateRoute from "./route/PrivateRoute";
 import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 
 // 1. Needed routes: All products page, product detail page and login page.
 // 2. All products display on the products page.
@@ -20,8 +21,10 @@ import { useEffect, useState } from "react";
 // 10. If matched products exit, display the products, otherwise display message.
 
 function App() {
-  const [authenticate, setAuthenticate] = useState(false);
+  const authenticate= useSelector(state => state.auth.authenticate)
   const [login, setLogin] = useState("Login");
+
+
 
   useEffect(() => {
     console.log(authenticate);
@@ -32,19 +35,19 @@ function App() {
       <Navbar
         login={login}
         setLogin={setLogin}
-        setAuthenticate={setAuthenticate}
+        
       />
       <Routes>
         <Route path="/" element={<ProductsPage />} />
         <Route path="/products" element={<ProductsPage />} />
         <Route
           path="/products/:id"
-          element={<PrivateRoute authenticate={authenticate} />}
+          element={<PrivateRoute  />}
         />
         <Route
           path="/login"
           element={
-            <LoginPage setAuthenticate={setAuthenticate} setLogin={setLogin} />
+            <LoginPage setLogin={setLogin} />
           }
         />
       </Routes>

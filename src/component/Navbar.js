@@ -9,10 +9,11 @@ import {
 import { Link, useNavigate } from "react-router-dom";
 import { Container, Offcanvas, Nav } from "react-bootstrap";
 
-const Navbar = ({ login, setLogin, setAuthenticate }) => {
+const Navbar = ({ login, setLogin }) => {
   const [showMenu, setShowMenu] = useState(false);
   const menuList = ["Women", "Men", "Baby", "Home", "Sale", "Sustainability"];
   const inputEl = useRef(null);
+
   console.log("input", inputEl);
 
   const handleClose = () => setShowMenu(false);
@@ -36,7 +37,6 @@ const Navbar = ({ login, setLogin, setAuthenticate }) => {
   const HandleLogin = () => {
     if (login !== "Login") {
       setLogin("Login");
-      setAuthenticate(false);
       navigate("/login");
     }
   };

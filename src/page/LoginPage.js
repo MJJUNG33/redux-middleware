@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { authenticateAction } from "../redux/actions/authenticateAction";
 
-const LoginPage = ({ setAuthenticate, setLogin }) => {
+const LoginPage = ({ setLogin }) => {
   const [id, setId] = useState();
   const [password, setPassword] = useState()
   const navigate = useNavigate();

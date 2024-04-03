@@ -1,19 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect} from "react";
 import { Container, Row, Col, Button, Image, Form } from "react-bootstrap";
+import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
+import {detailProductAction} from "../redux/actions/detailProductAction"
 
 const ProductDetailPage = () => {
   const { id } = useParams();
-  const [product, setProduct] = useState([]);
+  const product = useSelector((state) => state.detailProduct.detailProduct)
+  const dispatch = useDispatch()
 
-  const getProductDetail = async () => {
+  const getProductDetail = () => {
     try {
-      // const url = `http://localhost:5000/products/${id}`;
-      const url = `https://my-json-server.typicode.com/MJJUNG33/shopping-mall/products/${id}`;
-      const response = await fetch(url);
-      const data = await response.json();
-      console.log(data);
-      setProduct(data);
+      dispatch(detailProductAction.detailProduct(id))
+
     } catch (error) {
       console.log("Error:", error);
     }
