@@ -4,6 +4,7 @@ import { Container, Col, Row } from "react-bootstrap";
 import { useSearchParams } from "react-router-dom";
 import {productAction} from "../redux/actions/productAction"
 import { useDispatch, useSelector } from "react-redux";
+import { fetchProducts } from "../redux/reducers/productSlice";
 
 const ProductsPage = () => {
   const products = useSelector((state) => state.product.products);
@@ -16,7 +17,8 @@ const ProductsPage = () => {
       try {
         const searchQuery = query.get("q") || "";
         console.log("Search query:", searchQuery);
-       dispatch(productAction.getProducts(searchQuery))
+      //  dispatch(productAction.getProducts(searchQuery))
+      dispatch(fetchProducts(searchQuery));
       } catch (error) {
         console.log("Error:", error);
       }
@@ -37,7 +39,7 @@ const ProductsPage = () => {
 
   return (
     <Container className="mt-5 mb-5">
-      {filteredProducts.length === 0 ? (
+      {filteredProducts && filteredProducts.length === 0 ? (
         <div className="not-find-product">
           Sorry, there is no matching items with{" "}
           <p className="search-input-value">"{query.get("q")}"</p>
@@ -49,7 +51,7 @@ const ProductsPage = () => {
           lg={4}
           className="align-items-start m-1 product-list"
         >
-          {filteredProducts.map((product, i) => (
+          {filteredProducts && filteredProducts.map((product, i) => (
             <Col key={i}>
               <ProductsCard product={product} />
             </Col>

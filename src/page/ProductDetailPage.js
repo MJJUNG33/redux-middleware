@@ -2,7 +2,7 @@ import React, { useEffect} from "react";
 import { Container, Row, Col, Button, Image, Form } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { productAction } from "../redux/actions/productAction";
+import { fetchDetailProduct } from "../redux/reducers/productSlice";
 
 const ProductDetailPage = () => {
   const { id } = useParams();
@@ -11,7 +11,8 @@ const ProductDetailPage = () => {
 
   const getProductDetail = () => {
     try {
-      dispatch(productAction.getDetailProduct(id))
+      // dispatch(productAction.getDetailProduct(id))
+      dispatch(fetchDetailProduct(id))
 
     } catch (error) {
       console.log("Error:", error);
@@ -20,7 +21,7 @@ const ProductDetailPage = () => {
 
   useEffect(() => {
     getProductDetail();
-  }, [id]);
+}, [id]);
 
   return (
     <Container
@@ -80,7 +81,11 @@ const ProductDetailPage = () => {
         </Col>
       </Row>
     </Container>
-  );
+  )
+      
+  
+  
+
 };
 
 export default ProductDetailPage;
