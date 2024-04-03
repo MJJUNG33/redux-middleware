@@ -2,22 +2,21 @@ import React, { useEffect, useState, useMemo } from "react";
 import ProductsCard from "../component/ProductsCard";
 import { Container, Col, Row } from "react-bootstrap";
 import { useSearchParams } from "react-router-dom";
+import {productAction} from "../redux/actions/productAction"
+import { useDispatch, useSelector } from "react-redux";
 
 const ProductsPage = () => {
-  const [products, setProducts] = useState([]);
+  const products = useSelector((state) => state.product.products);
   const [query] = useSearchParams();
+  
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    const getProducts = async () => {
+    const getProducts = () => {
       try {
         const searchQuery = query.get("q") || "";
         console.log("Search query:", searchQuery);
-        // const url = `http://localhost:5000/products?q=${searchQuery}`;
-        const url = `https://my-json-server.typicode.com/MJJUNG33/shopping-mall/products?q=${searchQuery}`;
-
-        const response = await fetch(url);
-        const data = await response.json();
-        setProducts(data);
+       dispatch(productAction.getProducts(searchQuery))
       } catch (error) {
         console.log("Error:", error);
       }

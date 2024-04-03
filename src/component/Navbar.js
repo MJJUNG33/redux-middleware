@@ -16,7 +16,7 @@ const Navbar = ({ login, setLogin, setAuthenticate }) => {
   console.log("input", inputEl);
 
   const handleClose = () => setShowMenu(false);
-  const handleShow = () => setShowMenu(true);
+  const handleShow = () => setShowMenu(true)
 
   const navigate = useNavigate();
 
