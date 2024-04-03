@@ -2,16 +2,16 @@ import React, { useEffect} from "react";
 import { Container, Row, Col, Button, Image, Form } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import {detailProductAction} from "../redux/actions/detailProductAction"
+import { productAction } from "../redux/actions/productAction";
 
 const ProductDetailPage = () => {
   const { id } = useParams();
-  const product = useSelector((state) => state.detailProduct.detailProduct)
+  const product = useSelector((state) => state.product.detailProduct)
   const dispatch = useDispatch()
 
   const getProductDetail = () => {
     try {
-      dispatch(detailProductAction.detailProduct(id))
+      dispatch(productAction.getDetailProduct(id))
 
     } catch (error) {
       console.log("Error:", error);
