@@ -19,9 +19,9 @@ const initialState = {
 
 const authenticateSlice = createSlice({name:"authenticate", initialState, reducers: {
     authenticate(state,action) {
-        state.id = action.payload.id,
-        state.password = action.payload.password
-        state.authenticate = action.payload.authenticate
+        state.id = action.payload.id;
+        state.password = action.payload.password;
+        state.authenticate = action.payload.authenticate;
     }
 }})
 
