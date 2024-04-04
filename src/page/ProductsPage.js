@@ -3,7 +3,7 @@ import ProductsCard from "../component/ProductsCard";
 import { Container, Col, Row } from "react-bootstrap";
 import { useSearchParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchProducts } from "../redux/reducers/productSlice";
+import { fetchProducts } from "../redux/slices/productSlice";
 
 const ProductsPage = () => {
   const products = useSelector((state) => state.product.products);

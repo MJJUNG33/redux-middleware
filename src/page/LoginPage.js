@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Form, Button, Container } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { authenticateAction } from "../redux/actions/authenticateAction";
+import { login } from "../redux/slices/authenticateSlice";
 
 const LoginPage = ({ setLogin }) => {
   const [id, setId] = useState();
@@ -14,7 +14,7 @@ const LoginPage = ({ setLogin }) => {
   const loginUser = (e) => {
     e.preventDefault();
     // setAuthenticate(true);
-    dispatch(authenticateAction.login(id, password));
+    dispatch(login({ id, password }));
     setLogin("Logout");
     navigate("/");
   };

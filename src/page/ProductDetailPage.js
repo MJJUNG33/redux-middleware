@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Container, Row, Col, Button, Image, Form } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { fetchDetailProduct } from "../redux/reducers/productSlice";
+import { fetchDetailProduct } from "../redux/slices/productSlice";
 
 const ProductDetailPage = () => {
   const { id } = useParams();
