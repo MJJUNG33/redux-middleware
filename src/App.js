@@ -21,35 +21,24 @@ import { useSelector } from "react-redux";
 // 10. If matched products exit, display the products, otherwise display message.
 
 function App() {
-  const authenticate= useSelector(state => state.auth.authenticate)
+  const authenticate = useSelector((state) => state.auth.authenticate);
   const [login, setLogin] = useState("Login");
 
-
-
   useEffect(() => {
-    console.log(authenticate);
+    console.log("authenticate", authenticate);
   }, [authenticate]);
 
   return (
     <div className="App">
-      <Navbar
-        login={login}
-        setLogin={setLogin}
-        
-      />
+      <Navbar login={login} setLogin={setLogin} />
       <Routes>
         <Route path="/" element={<ProductsPage />} />
         <Route path="/products" element={<ProductsPage />} />
         <Route
           path="/products/:id"
-          element={<PrivateRoute  />}
+          element={<PrivateRoute authenticate={authenticate} />}
         />
-        <Route
-          path="/login"
-          element={
-            <LoginPage setLogin={setLogin} />
-          }
-        />
+        <Route path="/login" element={<LoginPage setLogin={setLogin} />} />
       </Routes>
     </div>
   );

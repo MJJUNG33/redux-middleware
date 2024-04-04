@@ -1,4 +1,4 @@
-import React, { useEffect} from "react";
+import React, { useEffect } from "react";
 import { Container, Row, Col, Button, Image, Form } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
@@ -6,22 +6,24 @@ import { fetchDetailProduct } from "../redux/reducers/productSlice";
 
 const ProductDetailPage = () => {
   const { id } = useParams();
-  const product = useSelector((state) => state.product.detailProduct)
-  const dispatch = useDispatch()
+  const product = useSelector((state) => state.product.detailProduct);
+  const dispatch = useDispatch();
 
-  const getProductDetail = () => {
-    try {
-      // dispatch(productAction.getDetailProduct(id))
-      dispatch(fetchDetailProduct(id))
-
-    } catch (error) {
-      console.log("Error:", error);
-    }
-  };
+  // const getProductDetail = () => {
+  //   try {
+  //     // dispatch(productAction.getDetailProduct(id))
+  //   } catch (error) {
+  //     console.log("Error:", error);
+  //   }
+  // };
 
   useEffect(() => {
-    getProductDetail();
-}, [id]);
+    dispatch(fetchDetailProduct(id));
+  }, [dispatch, id]);
+
+  if (!product || !product.img) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <Container
@@ -38,7 +40,7 @@ const ProductDetailPage = () => {
           className="d-flex flex-column align-items-start mt-2"
         >
           <Row className="w-100 ">
-            <Col xs={5} md={12} lassName="pe-0">
+            <Col xs={5} md={12} className="pe-0">
               {product.choice === true ? (
                 <p className="extra-info choice detail-choice-new">
                   Conscious choice
@@ -81,11 +83,7 @@ const ProductDetailPage = () => {
         </Col>
       </Row>
     </Container>
-  )
-      
-  
-  
-
+  );
 };
 
 export default ProductDetailPage;

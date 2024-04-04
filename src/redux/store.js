@@ -4,8 +4,8 @@
 // import { composeWithDevTools } from "@redux-devtools/extension";
 import { configureStore } from "@reduxjs/toolkit";
 import authenticateReducer from "./reducers/authenticateReducer";
-import productReducer from "./reducers/productSlice";
-import detailProductReducer from "./reducers/productSlice"
+import productSlice from "./reducers/productSlice";
+
 
 
 // const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk))) 
@@ -13,8 +13,8 @@ import detailProductReducer from "./reducers/productSlice"
 const store = configureStore({
     reducer: {
         auth: authenticateReducer,
-        product: productReducer,detailProductReducer
+        product: productSlice,
     }
 })
 
-export default store
+export default store;

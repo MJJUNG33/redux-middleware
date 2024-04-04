@@ -1,15 +1,14 @@
-import React, { useEffect,  useMemo } from "react";
+import React, { useEffect, useMemo } from "react";
 import ProductsCard from "../component/ProductsCard";
 import { Container, Col, Row } from "react-bootstrap";
 import { useSearchParams } from "react-router-dom";
-import {productAction} from "../redux/actions/productAction"
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProducts } from "../redux/reducers/productSlice";
 
 const ProductsPage = () => {
   const products = useSelector((state) => state.product.products);
   const [query] = useSearchParams();
-  
+
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -17,8 +16,8 @@ const ProductsPage = () => {
       try {
         const searchQuery = query.get("q") || "";
         console.log("Search query:", searchQuery);
-      //  dispatch(productAction.getProducts(searchQuery))
-      dispatch(fetchProducts(searchQuery));
+        //  dispatch(productAction.getProducts(searchQuery))
+        dispatch(fetchProducts(searchQuery));
       } catch (error) {
         console.log("Error:", error);
       }
@@ -51,11 +50,12 @@ const ProductsPage = () => {
           lg={4}
           className="align-items-start m-1 product-list"
         >
-          {filteredProducts && filteredProducts.map((product, i) => (
-            <Col key={i}>
-              <ProductsCard product={product} />
-            </Col>
-          ))}
+          {filteredProducts &&
+            filteredProducts.map((product, i) => (
+              <Col key={i}>
+                <ProductsCard product={product} />
+              </Col>
+            ))}
         </Row>
       )}
     </Container>

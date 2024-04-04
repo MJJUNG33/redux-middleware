@@ -6,26 +6,31 @@ import { authenticateAction } from "../redux/actions/authenticateAction";
 
 const LoginPage = ({ setLogin }) => {
   const [id, setId] = useState();
-  const [password, setPassword] = useState()
+  const [password, setPassword] = useState();
+
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const loginUser = (e) => {
     e.preventDefault();
     // setAuthenticate(true);
-    navigate("/");
-    dispatch(authenticateAction.login(id,password));
+    dispatch(authenticateAction.login(id, password));
     setLogin("Logout");
-    console.log(loginUser);
+    navigate("/");
   };
-
 
   return (
     <Container>
       <Form className="m-5" onSubmit={(e) => loginUser(e)}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
-          <Form.Control type="email" placeholder="Enter email" onChange={(e) => {setId(e.target.value)}}/>
+          <Form.Control
+            type="email"
+            placeholder="Enter email"
+            onChange={(e) => {
+              setId(e.target.value);
+            }}
+          />
           <Form.Text className="text-muted">
             We'll never share your email with anyone else.
           </Form.Text>
@@ -33,7 +38,13 @@ const LoginPage = ({ setLogin }) => {
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Password</Form.Label>
-          <Form.Control type="password" placeholder="Password" onChange={(e) => {setPassword(e.target.value)}}/>
+          <Form.Control
+            type="password"
+            placeholder="Password"
+            onChange={(e) => {
+              setPassword(e.target.value);
+            }}
+          />
         </Form.Group>
 
         <Button variant="danger" type="submit">
